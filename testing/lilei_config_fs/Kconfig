@@ -1,0 +1,18 @@
+
+
+config TESTING_LILEI_TEST
+        tristate "test for lilei"
+        default n
+
+config TESTING_LILEI_TEST_PROGNAME
+        string "Program name"
+        default "hello"
+
+config TESTING_LILEI_TEST_PRIORITY
+        int "hello size"
+        default 100
+
+config TESTING_LILEI_TEST_STACKSIZE
+        int "hello stack"
+        default 4096
+

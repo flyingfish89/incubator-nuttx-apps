@@ -1,0 +1,7 @@
+
+
+
+ifneq ($(CONFIG_TESTING_LILEI_TEST),)
+CONFIGURED_APPS += $(APPDIR)/testing/lilei_config_fs
+endif
+

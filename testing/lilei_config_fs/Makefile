@@ -1,0 +1,16 @@
+
+
+include $(APPDIR)/Make.defs
+
+# MTD nvs test application info
+
+PROGNAME = $(CONFIG_TESTING_LILEI_TEST_PROGNAME)
+PRIORITY = $(CONFIG_TESTING_LILEI_TEST_PRIORITY)
+STACKSIZE = 20000
+MODULE = $(CONFIG_TESTING_LILEI_TEST)
+# MTD nvs test
+
+MAINSRC = hello.c
+
+include $(APPDIR)/Application.mk
+
