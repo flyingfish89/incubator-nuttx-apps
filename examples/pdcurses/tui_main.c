@@ -240,7 +240,7 @@ static void subfunc2(void)
 {
   char fname[MAXSTRLEN];
 
-  strcpy(fname, FNAME);
+  strlcpy(fname, FNAME, sizeof(fname));
   if (getfname("File to browse:", fname, 50))
     {
       showfile(fname);

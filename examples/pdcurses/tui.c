@@ -703,7 +703,7 @@ int weditstr(WINDOW *win, char *buf, int field)
       return ERR;
     }
 
-  strcpy(org, buf);             /* save original */
+  strlcpy(org, buf, sizeof(org));             /* save original */
 
   wrefresh(win);
   getyx(win, cury, curx);

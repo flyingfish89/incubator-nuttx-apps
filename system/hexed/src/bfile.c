@@ -211,13 +211,11 @@ FAR struct bfile_s *bfopen(char *name, char *mode)
 
   /* Set file name */
 
-  if ((bf->name = malloc(strlen(name) + 1)) == NULL)
+  if ((bf->name = strdup(name)) == NULL)
     {
       bffree(bf);
       return NULL;
     }
-
-  strcpy(bf->name, name);
 
   /* Open file */
 

@@ -573,7 +573,7 @@ int ft80x_dl_string(int fd, FAR struct ft80x_dlbuffer_s *buffer,
 
   bufptr            = (FAR uint8_t *)buffer->dlbuffer;
   bufptr           += buffer->dloffset;
-  strcpy((FAR char *)bufptr, str);
+  strlcpy((FAR char *)bufptr, str, sizeof(buffer->dlbuffer) - buffer->dloffset);
 
   /* NOTE: that strcpy will copy the NUL terminator too */
 
